@@ -112,10 +112,10 @@ export default function Header() {
           </div>
 
           <div className="space-y-4 text-lg font-semibold">
-            <Link href="/" className="block hover:text-[#780000]">Home</Link>
-            <Link href="/pricing" className="block hover:text-[#780000]">Pricing</Link>
-            <Link href="/contact-us" className="block hover:text-[#780000]">Contact</Link>
-            <Link href="/about-us" className="block hover:text-[#780000]">About</Link>
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="block hover:text-[#780000]">Home</Link>
+            <Link href="/pricing" onClick={() => setIsMobileMenuOpen(false)} className="block hover:text-[#780000]">Pricing</Link>
+            <Link href="/contact-us" onClick={() => setIsMobileMenuOpen(false)} className="block hover:text-[#780000]">Contact</Link>
+            <Link href="/about-us" onClick={() => setIsMobileMenuOpen(false)} className="block hover:text-[#780000]">About</Link>
           </div>
         </div>
       )}

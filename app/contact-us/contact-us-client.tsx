@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Office',
-    details: ['Office No 025-026 Naklath 286'],
+    details: ['SIU OFFICES, 4-6 GREATOREX STREET LONDON UNITED KINGDOM E1 5NF'],
     gradient: 'from-[#780000] to-black'
   }
 ]

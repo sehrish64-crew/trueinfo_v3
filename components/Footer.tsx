@@ -53,10 +53,22 @@ export default function Footer() {
             </Link>
 
             <span className="block mt-2">
-            An approved NMVTIS data provider.
-              <span className="text-white/90"> Email: Info@trueinfoprovider.com</span>
+              An approved NMVTIS data provider.
             </span>
 
+            <span className="block mt-2 text-white/90">
+              SIU OFFICES, 4-6 GREATOREX STREET, LONDON, UNITED KINGDOM E1 5NF
+            </span>
+            <span className="block mt-1 text-white/90">
+              Phone: <a href="tel:+447828760930" className="text-[#ccc] hover:text-red-400 transition">+44 7828 760930</a>
+              <span className="mx-2">|</span>
+              <a href="https://wa.me/447828760930" target="_blank" rel="noreferrer" className="text-[#ccc] hover:text-green-400 transition">
+                WhatsApp Chat
+              </a>
+            </span>
+            <span className="block mt-2">
+              <span className="text-white/90">Email: Info@trueinfoprovider.com</span>
+            </span>
           </p>
         </div>
 
