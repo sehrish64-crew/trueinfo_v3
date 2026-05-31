@@ -22,12 +22,12 @@ export default function RefundPolicyPageClient() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900">Introduction to the Services</h2>
-            <p className="mt-3">These Terms and Conditions ("Agreement") form a legally binding contract between you ("Buyer", "you", or "your"), <strong>Merchant</strong> (as defined below), and <strong>Allied Timber</strong> ("Supplier", "we", "our", or "us") and govern your use of the services provided via <strong>TrueInfoProvider.com</strong>.</p>
-            <p className="mt-3"><strong>Merchant is the Merchant of Record and authorised reseller</strong> of the Products offered by Allied Timber. This means that payments are processed by Merchant, but the Product is <strong>licensed and provided by Allied Timber</strong>.</p>
+            <p className="mt-3">These Terms and Conditions ("Agreement") form a legally binding contract between you ("Buyer", "you", or "your"), <strong>Merchant</strong> (as defined below), and <strong>Nexlify Labs LTD</strong> ("Supplier", "we", "our", or "us") and govern your use of the services provided via <strong>TrueInfoProvider.com</strong>.</p>
+            <p className="mt-3"><strong>Merchant is the Merchant of Record and authorised reseller</strong> of the Products offered by Nexlify Labs LTD. This means that payments are processed by Merchant, but the Product is <strong>licensed and provided by Nexlify Labs LTD</strong>.</p>
             <p className="mt-3">By placing an order through Merchant, you agree to both:</p>
             <ul className="mt-3 space-y-2 list-disc list-inside">
               <li>These Terms & Conditions, and</li>
-              <li>The Supplier Agreement provided by Allied Timber</li>
+              <li>The Supplier Agreement provided by Nexlify Labs LTD</li>
             </ul>
           </section>
 
@@ -53,8 +53,8 @@ export default function RefundPolicyPageClient() {
                   {/* <li><strong>Rest of World:</strong> Merchant.com Market Limited, Judd House, 18-29 Mora Street, London EC1V 8BT, UK</li> */}
                 </ul>
               </li>
-              <li><strong>Product:</strong> Digital vehicle history reports and related services provided by Allied Timber</li>
-              <li><strong>Supplier:</strong> Allied Timber</li>
+              <li><strong>Product:</strong> Digital vehicle history reports and related services provided by Nexlify Labs LTD</li>
+              <li><strong>Supplier:</strong> Nexlify Labs LTD</li>
               <li><strong>Services:</strong> Online services enabling the purchase and delivery of Products via Merchant</li>
               <li><strong>Transaction:</strong> Purchase of a Product through the Services</li>
             </ul>
@@ -73,7 +73,7 @@ export default function RefundPolicyPageClient() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900">Nature of the Product</h2>
-            <p className="mt-3">All Products provided by <strong>Allied Timber</strong> are <strong>digital vehicle information reports</strong> generated using third-party data sources. Reports are provided <strong>as-is</strong> and reflect information available at the time of generation.</p>
+            <p className="mt-3">All Products provided by <strong>Nexlify Labs LTD</strong> are <strong>digital vehicle information reports</strong> generated using third-party data sources. Reports are provided <strong>as-is</strong> and reflect information available at the time of generation.</p>
           </section>
 
           <section>
@@ -84,7 +84,7 @@ export default function RefundPolicyPageClient() {
               <li>Prices may change at any time without notice</li>
               <li>You agree to receive invoices and receipts electronically</li>
             </ul>
-            <p className="mt-3">Allied Timber is not responsible for delivery failure caused by incorrect customer information.</p>
+            <p className="mt-3">Nexlify Labs LTD is not responsible for delivery failure caused by incorrect customer information.</p>
           </section>
 
           <section>
@@ -156,7 +156,7 @@ export default function RefundPolicyPageClient() {
             {/* 
             <div className="mt-6 ml-4">
               <h3 className="text-xl font-semibold text-gray-900">Partial Refunds</h3>
-              <p className="mt-2">In certain situations, Allied Timber may offer partial refunds at its discretion when:</p>
+              <p className="mt-2">In certain situations, Nexlify Labs LTD may offer partial refunds at its discretion when:</p>
               <ul className="mt-2 space-y-2 list-disc list-inside">
                 <li>The report contains some data but is incomplete</li>
                 <li>There was a minor technical issue causing inconvenience</li>
@@ -182,7 +182,7 @@ export default function RefundPolicyPageClient() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900">Limitation of Liability</h2>
-            <p className="mt-3">Allied Timber and Merchant shall not be liable for:</p>
+            <p className="mt-3">Nexlify Labs LTD and Merchant shall not be liable for:</p>
             <ul className="mt-3 space-y-2 list-disc list-inside">
               <li>Indirect or consequential damages</li>
               <li>Inaccurate third-party vehicle data</li>
@@ -193,7 +193,7 @@ export default function RefundPolicyPageClient() {
 
           <section>
             <h2 className="text-2xl font-semibold text-gray-900">Intellectual Property</h2>
-            <p className="mt-3">All content, reports, branding, and systems on TrueInfoProvider.com are the intellectual property of <strong>Allied Timber</strong> and may not be copied, resold, or redistributed.</p>
+            <p className="mt-3">All content, reports, branding, and systems on TrueInfoProvider.com are the intellectual property of <strong>Nexlify Labs LTD</strong> and may not be copied, resold, or redistributed.</p>
           </section>
 
           <section>
@@ -217,7 +217,7 @@ export default function RefundPolicyPageClient() {
           <section>
             <h2 className="text-2xl font-semibold text-gray-900">Contact Information</h2>
             <div className="mt-4 bg-blue-50 p-4 rounded-lg border border-blue-200 space-y-2">
-              <p className="text-gray-700"><strong>Supplier:</strong> Allied Timber</p>
+              <p className="text-gray-700"><strong>Supplier:</strong> Nexlify Labs LTD</p>
               <p className="text-gray-700"><strong>Website:</strong> <a href="https://TrueInfoProvider.com" className="text-blue-600 hover:underline">https://TrueInfoProvider.com</a></p>
               <p className="text-gray-700"><strong>Support:</strong> <a href="mailto:info@TrueInfoProvider.com" className="text-blue-600 hover:underline">info@TrueInfoProvider.com</a></p>
               <p className="text-gray-700">We aim to respond within 24-48 hours during business days</p>
@@ -225,7 +225,7 @@ export default function RefundPolicyPageClient() {
           </section>
 
           <section className="bg-gray-50 p-6 rounded-lg border border-gray-200 mt-8">
-            <p className="text-sm text-gray-700"><em>Last updated: January 2026. Allied Timber values customer satisfaction and is committed to resolving issues promptly and fairly.</em></p>
+            <p className="text-sm text-gray-700"><em>Last updated: January 2026. Nexlify Labs LTD values customer satisfaction and is committed to resolving issues promptly and fairly.</em></p>
           </section>
 
         </div>
