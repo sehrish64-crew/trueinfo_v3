@@ -4,7 +4,7 @@ import { getPrice, getCurrencySymbol } from '@/lib/prices';
 
 type PackageId = 'basic' | 'standard' | 'premium';
 
-export default function ProductBuyButtons({ currency = 'USD' }: { currency?: string }) {
+export default function ProductBuyButtons({ currency = 'GBP' }: { currency?: string }) {
   const packages: { id: PackageId; label: string }[] = [
     { id: 'basic', label: 'Basic' },
     { id: 'standard', label: 'Standard' },

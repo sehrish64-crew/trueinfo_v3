@@ -36,16 +36,16 @@ export const CURRENCY_SYMBOLS: Record<string, string> = {
   'UAH': '₴',
 }
 
-export function getPrice(packageId: 'basic' | 'standard' | 'premium', currency = 'USD') {
-  const pricing = PRICING_MAP[currency] || PRICING_MAP['USD']
+export function getPrice(packageId: 'basic' | 'standard' | 'premium', currency = 'GBP') {
+  const pricing = PRICING_MAP[currency] || PRICING_MAP['GBP']
   return pricing[packageId]
 }
 
-export function getCurrencySymbol(currency = 'USD') {
-  return CURRENCY_SYMBOLS[currency] || '$'
+export function getCurrencySymbol(currency = 'GBP') {
+  return CURRENCY_SYMBOLS[currency] || '£'
 }
 
-export function formatCurrency(amount: number, currency = 'USD', locale = 'en-US') {
+export function formatCurrency(amount: number, currency = 'GBP', locale = 'en-GB') {
   try {
     return new Intl.NumberFormat(locale, { style: 'currency', currency, maximumFractionDigits: 2 }).format(amount)
   } catch (e) {

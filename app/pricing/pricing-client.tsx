@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Check, Sparkles, Zap, Crown, Shield, TrendingUp, Clock } from 'lucide-react'
 import Image from 'next/image'
-import { useCountry } from '@/contexts/CountryContext'
 import { useTranslations } from '@/lib/translations'
 import HowItWorks from '@/components/HowItWorks'
 import Testimonials from '@/components/Testimonials'
@@ -80,7 +79,6 @@ const basePricingPlans = [
 ]
 
 export default function PricingClient() {
-  const { selectedCountry } = useCountry()
   const { t } = useTranslations()
   const [isVisible, setIsVisible] = useState(false)
   const [hoveredPlan, setHoveredPlan] = useState<number | null>(null)
@@ -88,8 +86,8 @@ export default function PricingClient() {
   const [selectedPlan, setSelectedPlan] = useState<'basic' | 'standard' | 'premium'>('basic')
   const sectionRef = useRef<HTMLDivElement>(null)
 
-  const currencySymbol = CURRENCY_SYMBOLS[selectedCountry.currency] || '$'
-  const pricing = PRICING_MAP[selectedCountry.currency] || PRICING_MAP['USD']
+  const currencySymbol = CURRENCY_SYMBOLS['GBP']
+  const pricing = PRICING_MAP['GBP']
 
   const pricingPlans = basePricingPlans.map(plan => ({
     ...plan,

@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
     let orderId = ''
     let transactionId = ''
     let amount = 0
-    let currency = 'USD'
+    let currency = 'GBP'
 
     // Handle different PayPal events
     switch (body.event_type) {
@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
         orderId = body.resource?.supplementary_data?.related_ids?.order_id
         transactionId = body.resource?.id
         amount = parseFloat(body.resource?.amount?.value || 0)
-        currency = body.resource?.amount?.currency_code || 'USD'
+        currency = body.resource?.amount?.currency_code || 'GBP'
         console.log('✅ Payment Completed:', { orderId, transactionId, amount })
         break
 

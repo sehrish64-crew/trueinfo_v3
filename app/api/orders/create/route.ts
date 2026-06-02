@@ -49,8 +49,8 @@ export async function POST(request: NextRequest) {
       identification_value,
       vin_number: vin_number || null,
       package_type,
-      country_code: country_code || 'US',
-      currency: currency || 'USD',
+      country_code: country_code || 'GB',
+      currency: currency || 'GBP',
       amount,
       payment_provider: paymentProvider || undefined,
     })

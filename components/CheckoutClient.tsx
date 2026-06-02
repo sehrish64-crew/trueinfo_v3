@@ -37,7 +37,7 @@ export default function CheckoutClient({ order }: { order: any }) {
   // Paddle integration removed
   const priceId = undefined
   // Use stored amount from order, don't recalculate
-  const displayAmount = order?.amount || getPrice(packageKey as 'basic' | 'standard' | 'premium', order?.currency || 'USD')
+  const displayAmount = order?.amount || getPrice(packageKey as 'basic' | 'standard' | 'premium', order?.currency || 'GBP')
 
   console.log('[CheckoutClient] Order loaded:', {
     order_id: order?.id,

@@ -55,7 +55,7 @@ function generatePaymentSuccessAdminEmail(data: any): string {
         <h3 style="margin-top: 0; color: #333; border-bottom: 2px solid #ddd; padding-bottom: 10px;">Payment Details:</h3>
         <p style="margin: 8px 0;"><strong>Transaction ID:</strong> ${data.transactionId || 'N/A'}</p>
         <p style="margin: 8px 0;"><strong>Product:</strong> ${data.packageType || 'N/A'}</p>
-        <p style="margin: 8px 0;"><strong>Amount:</strong> ${data.currency || 'USD'} ${Number(data.amount).toFixed(2)}</p>
+        <p style="margin: 8px 0;"><strong>Amount:</strong> ${data.currency || 'GBP'} ${Number(data.amount).toFixed(2)}</p>
         <p style="margin: 8px 0;"><strong>Customer Email:</strong> ${data.customerEmail}</p>
         <p style="margin: 8px 0;"><strong>Customer Name:</strong> ${data.customerName || 'Valued Customer'}</p>
         <p style="margin: 8px 0;"><strong>VIN:</strong> ${data.vinNumber || data.identificationValue || 'N/A'}</p>

@@ -45,7 +45,7 @@ export function getProductSchema() {
     offers: {
       '@type': 'AggregateOffer',
       availability: 'https://schema.org/InStock',
-      priceCurrency: 'USD',
+      priceCurrency: 'GBP',
       offerCount: '3',
     },
   };

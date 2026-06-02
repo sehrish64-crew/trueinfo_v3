@@ -4,7 +4,6 @@ import { usePathname } from 'next/navigation'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CountryProvider } from '@/contexts/CountryContext'
-import LocationPopup from '@/components/LocationPopup'
 
 const whatsappLink = 'https://wa.me/447828760930'
 
@@ -23,7 +22,6 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
 
   return (
     <CountryProvider>
-      <LocationPopup />
       <Header />
       <div className="fixed bottom-6 right-6 z-[9999]">
         <a

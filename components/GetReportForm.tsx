@@ -6,9 +6,6 @@ import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { useCountry } from '@/contexts/CountryContext'
-import countriesList from '@/lib/countries'
-import { Input as TextInput } from '@/components/ui/input'
 import { useTranslations } from '@/lib/translations'
 import { parseJsonSafe } from '@/lib/utils'
 import { getPrice, formatCurrency } from '@/lib/prices'
@@ -29,7 +26,6 @@ const packages = [
 ]
 
 export default function GetReportForm({ isOpen, onClose, preselectedPackage, prefilledIdentType, prefilledIdentValue }: GetReportFormProps) {
-  const { selectedCountry, setSelectedCountry } = useCountry()
 
   // Add dropdown styling
   useEffect(() => {
@@ -58,8 +54,6 @@ export default function GetReportForm({ isOpen, onClose, preselectedPackage, pre
   const [plateNumber, setPlateNumber] = useState('')
   const [customerEmail, setCustomerEmail] = useState('')
   const [selectedPackage, setSelectedPackage] = useState(preselectedPackage || '')
-  const [selectedCountryCode, setSelectedCountryCode] = useState(selectedCountry?.code || 'US')
-  const [countryFilter, setCountryFilter] = useState('')
   const [error, setError] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
 
@@ -82,11 +76,11 @@ export default function GetReportForm({ isOpen, onClose, preselectedPackage, pre
       // Prepare form data
       const formData = {
         packageId: selectedPackage,
-        currency: selectedCountry.currency,
+        currency: 'GBP',
         customerEmail,
         vehicleIdentifier: vehicleIdType === 'vin' ? vinNumber : plateNumber,
         vehicleType,
-        amount: getPrice(selectedPackage as any, selectedCountry.currency),
+        amount: getPrice(selectedPackage as any, 'GBP'),
       }
       
       // Send form submission to admin email
@@ -272,43 +266,6 @@ export default function GetReportForm({ isOpen, onClose, preselectedPackage, pre
             </div>
 
             {/* Country */}
-            <div className="space-y-2">
-              <Label className="block text-sm font-semibold text-foreground">Country</Label>
-              <Select
-                value={selectedCountryCode}
-                onValueChange={(v) => {
-                  setSelectedCountryCode(v)
-                  const found = countriesList.find((c) => c.code === v)
-                  if (found) setSelectedCountry(found)
-                }}
-              >
-                <SelectTrigger className="h-12 border-2 border-[#780000]/30 focus:border-[#780000] bg-white">
-                  <SelectValue placeholder="Select country" />
-                </SelectTrigger>
-                <SelectContent className="z-[10000] max-h-60 overflow-auto">
-                  <div className="p-2">
-                    <TextInput
-                      value={countryFilter}
-                      onChange={(e) => setCountryFilter(e.target.value)}
-                      placeholder="Search countries"
-                      className="mb-2 h-9"
-                    />
-                  </div>
-                  {countriesList
-                    .filter(
-                      (c) =>
-                        c.name.toLowerCase().includes(countryFilter.toLowerCase()) ||
-                        c.code.toLowerCase().includes(countryFilter.toLowerCase())
-                    )
-                    .map((c) => (
-                      <SelectItem key={c.code} value={c.code}>
-                        {c.name}
-                      </SelectItem>
-                    ))}
-                </SelectContent>
-              </Select>
-            </div>
-
             {/* Package Selection */}
             <div className="space-y-3">
               <Label className="block text-sm font-semibold text-foreground">
@@ -331,8 +288,8 @@ export default function GetReportForm({ isOpen, onClose, preselectedPackage, pre
                     </div>
                     <div className="text-xs text-muted-foreground mt-2 font-semibold">
                       {formatCurrency(
-                        getPrice(pkg.id as any, selectedCountry.currency),
-                        selectedCountry.currency
+                        getPrice(pkg.id as any, 'GBP'),
+                        'GBP'
                       )}
                     </div>
                   </button>
@@ -368,10 +325,10 @@ export default function GetReportForm({ isOpen, onClose, preselectedPackage, pre
                   : `Continue to Payment - ${
                       selectedPackage
                         ? formatCurrency(
-                            getPrice(selectedPackage as any, selectedCountry.currency),
-                            selectedCountry.currency
+                            getPrice(selectedPackage as any, 'GBP'),
+                            'GBP'
                           )
-                        : '$0'
+                        : '£0'
                     }`}
               </Button>
             </div>

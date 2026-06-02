@@ -50,7 +50,7 @@ export default function CheckoutSummary({ order }: { order: any }) {
       <div className="mt-4 border-t pt-4">
         <div className="flex justify-between items-center">
           <div className="text-sm text-muted-foreground">Subtotal</div>
-          <div className="text-lg font-bold">{order.currency || 'USD'} {Number(order.amount || 0).toFixed(2)}</div>
+          <div className="text-lg font-bold">{order.currency || 'GBP'} {Number(order.amount || 0).toFixed(2)}</div>
         </div>
 
         <div className="mt-3 text-xs text-gray-500">Taxes and fees calculated at checkout.</div>

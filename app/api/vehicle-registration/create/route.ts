@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
     const licensePlate = formData.get('licensePlate') as string || null
     const description = formData.get('description') as string
     const price = formData.get('price') as string
-    const currency = formData.get('currency') as string || 'USD'
+    const currency = formData.get('currency') as string || 'GBP'
 
     // Validate required fields
     const missingFields = []

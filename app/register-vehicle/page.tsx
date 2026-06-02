@@ -6,7 +6,6 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Upload, X } from 'lucide-react'
-import { useCountry } from '@/contexts/CountryContext'
 import { parseJsonSafe } from '@/lib/utils'
 
 interface FormData {
@@ -26,7 +25,6 @@ interface FormData {
 
 export default function RegisterVehiclePage() {
   const router = useRouter()
-  const { selectedCountry } = useCountry()
   const [formData, setFormData] = useState<FormData>({
     ownerName: '',
     ownerEmail: '',
@@ -133,7 +131,7 @@ export default function RegisterVehiclePage() {
       submitFormData.append('licensePlate', formData.licensePlate)
       submitFormData.append('description', formData.description)
       submitFormData.append('price', formData.price)
-      submitFormData.append('currency', selectedCountry.currency)
+      submitFormData.append('currency', 'GBP')
 
       images.forEach((image, index) => {
         submitFormData.append(`images`, image)
@@ -367,7 +365,7 @@ export default function RegisterVehiclePage() {
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Pricing</h2>
             <div className="max-w-xs">
               <Label htmlFor="price" className="block text-sm font-medium text-gray-700 mb-2">
-                Asking Price ({selectedCountry.currency}) *
+                Asking Price (GBP) *
               </Label>
               <Input
                 id="price"

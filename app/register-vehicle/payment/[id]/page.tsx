@@ -3,17 +3,16 @@
 import { useEffect, useState } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
-import { useCountry } from '@/contexts/CountryContext'
+import { Check } from 'lucide-react'
 
 export default function PaymentPage() {
   const params = useParams()
   const router = useRouter()
-  const { selectedCountry } = useCountry()
   const registrationId = params.id as string
   const [isProcessing, setIsProcessing] = useState(false)
   const [error, setError] = useState('')
 
-  const registrationPrice = 30 // Fixed at $30
+  const registrationPrice = 30 // Fixed at GBP 30
 
   const handlePayment = async () => {
     setError('Payment system is currently unavailable. Paddle integration has been removed.')
@@ -51,7 +50,7 @@ export default function PaymentPage() {
                 <p className="text-sm text-gray-500">One-time fee to list your vehicle</p>
               </div>
               <p className="text-2xl font-bold text-blue-600">
-                {selectedCountry.currency} {registrationPrice.toFixed(2)}
+                GBP {registrationPrice.toFixed(2)}
               </p>
             </div>
 
@@ -104,7 +103,7 @@ export default function PaymentPage() {
               className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-lg py-6"
               disabled={isProcessing}
             >
-              {isProcessing ? 'Processing...' : `Pay ${selectedCountry.currency} ${registrationPrice.toFixed(2)}`}
+              {isProcessing ? 'Processing...' : `Pay GBP ${registrationPrice.toFixed(2)}`}
             </Button>
           </div>
 
