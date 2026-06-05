@@ -9,9 +9,9 @@ interface PaymentMethodSelectorProps {
 }
 
 const STRIPE_CHECKOUT_URLS: Record<'basic' | 'standard' | 'premium', string> = {
-  basic: 'https://buy.stripe.com/fZu5kv0QBf6o0Yi6PS0kE03',
-  standard: 'https://buy.stripe.com/9B67sDdDn0bu9uOb680kE00',
-  premium: 'https://buy.stripe.com/fZu5kvfLvf6ogXg6PS0kE02',
+  basic: 'https://buy.stripe.com/dRm00b7eZbUcaySa240kE06',
+  standard: 'https://buy.stripe.com/8x24greHraQ86iC7TW0kE07',
+  premium: 'https://buy.stripe.com/8x2bIT8j31fydL47TW0kE08',
 }
 
 export function PaymentMethodSelector({
