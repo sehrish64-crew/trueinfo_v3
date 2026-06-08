@@ -9,20 +9,20 @@ import { Button } from '@/components/ui/button'
 import { useTranslations } from '@/lib/translations'
 import { parseJsonSafe } from '@/lib/utils'
 
-const contactInfo = [
-  {
-    icon: Mail,
-    title: 'Email',
-    details: ['info@TrueInfoProvider.com'],
-    gradient: 'from-[#780000] to-red-900'
-  },
-  {
-    icon: MapPin,
-    title: 'Office',
-    details: ['SIU OFFICES, 4-6 GREATOREX STREET LONDON UNITED KINGDOM E1 5NF'],
-    gradient: 'from-[#780000] to-black'
-  }
-]
+// const contactInfo = [
+//   {
+//     icon: Mail,
+//     title: 'Email',
+//     details: ['info@TrueInfoProvider.com'],
+//     gradient: 'from-[#780000] to-red-900'
+//   },
+//   {
+//     icon: MapPin,
+//     title: 'Office',
+//     details: ['SIU OFFICES, 4-6 GREATOREX STREET LONDON UNITED KINGDOM E1 5NF'],
+//     gradient: 'from-[#780000] to-black'
+//   }
+// ]
 
 export default function ContactUsClient() {
   const { t } = useTranslations()
@@ -99,7 +99,7 @@ export default function ContactUsClient() {
         </div>
 
         {/* CONTACT CARDS */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        {/* <div className="grid md:grid-cols-2 gap-6 mb-12">
           {contactInfo.map((item, i) => (
             <div
               key={i}
@@ -118,7 +118,7 @@ export default function ContactUsClient() {
               ))}
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* FORM */}
         <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">

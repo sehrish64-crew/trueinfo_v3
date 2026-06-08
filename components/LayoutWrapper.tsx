@@ -5,7 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CountryProvider } from '@/contexts/CountryContext'
 
-const whatsappLink = 'https://wa.me/447828760930'
+const whatsappLink = 'https://wa.me/447555979712'
 
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
