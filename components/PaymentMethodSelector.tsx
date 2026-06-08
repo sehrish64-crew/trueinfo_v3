@@ -9,9 +9,9 @@ interface PaymentMethodSelectorProps {
 }
 
 const STRIPE_CHECKOUT_URLS: Record<'basic' | 'standard' | 'premium', string> = {
-  basic: 'https://buy.stripe.com/dRm00b7eZbUcaySa240kE06',
-  standard: 'https://buy.stripe.com/8x24greHraQ86iC7TW0kE07',
-  premium: 'https://buy.stripe.com/8x2bIT8j31fydL47TW0kE08',
+  basic: 'https://www.paypal.com/ncp/payment/KECZPJDJ5QSQE',
+  standard: 'https://www.paypal.com/ncp/payment/XAPJP3RB2Z2WA',
+  premium: 'https://www.paypal.com/ncp/payment/K2NVZ6HTYTYMJ',
 }
 
 export function PaymentMethodSelector({
@@ -49,7 +49,7 @@ export function PaymentMethodSelector({
           rel="noreferrer"
           className="inline-flex items-center justify-center w-full px-4 py-3 bg-[#780000] text-white rounded-xl font-semibold hover:bg-[#5a0000] transition"
         >
-          Pay with Stripe
+          Pay with Paypal
         </a>
       </div>
 
