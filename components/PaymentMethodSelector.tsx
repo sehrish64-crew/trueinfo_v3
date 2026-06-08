@@ -23,7 +23,7 @@ export function PaymentMethodSelector({
 
   return (
     <div className="w-full max-w-md mx-auto p-4 sm:p-6 bg-white rounded-lg border border-gray-200 relative z-10">
-      <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">Secure Stripe Checkout</h2>
+      <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-4 sm:mb-6">Secure Paypal Checkout</h2>
 
       <div className="space-y-4">
         <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
