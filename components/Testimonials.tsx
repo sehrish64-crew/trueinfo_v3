@@ -116,7 +116,7 @@ export default function Testimonials() {
           {/* LIGHTER GRADIENT (FIXED) */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#780000]/60 via-[#780000]/30 to-transparent flex items-center">
 
-            <div className="max-w-xl px-2TrueInfoProvider Vehicle Intelligence">
+            <div className="p-3 max-w-xl px-2TrueInfoProvider Vehicle Intelligence">
 
               <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">
                 {t('testimonials_trusted_title')}

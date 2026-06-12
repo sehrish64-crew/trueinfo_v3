@@ -106,7 +106,7 @@ export default function Banner() {
                     <button 
                       type="button" 
                       onClick={() => setVehicleIdType('plate')} 
-                      className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 rounded-full transition-all text-xs sm:text-sm font-medium ${isHydrated && vehicleIdType === 'plate' ? 'bg-black text-white shadow' : 'text-black hover:bg-white/10'}`}
+                      className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-1 rounded-full transition-all text-xs sm:text-sm font-medium ${isHydrated && vehicleIdType === 'plate' ? 'bg-black text-white shadow' : 'text-white hover:bg-white/10'}`}
                       suppressHydrationWarning
                     >
                       <Hash className="w-3 sm:w-4 h-3 sm:h-4" />

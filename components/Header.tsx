@@ -17,7 +17,7 @@ export default function Header() {
   const isActivePath = (href: string) => pathname === href
 
   const mobileNavLink = (href: string) =>
-    `block rounded-xl px-4 py-2 text-sm font-semibold transition-all duration-200 ${
+    `block rounded-xl px-4 py-3 text-sm font-semibold transition-all duration-200 ${
       isActivePath(href)
         ? 'bg-gradient-to-r from-black via-[#780000] to-red-600 text-white border-transparent shadow-md'
         : 'text-black border-gray-200 hover:bg-red-50 hover:text-[#780000]'
@@ -35,8 +35,8 @@ export default function Header() {
             {/* LOGO */}
             <Link href="/" className="flex items-center gap-2 sm:gap-3">
               {/* <img src="/logo.png" alt="TrueInfoProvider" className="h-8 w-auto sm:h-9" /> */}
-              <div className="flex flex-col leading-none gap-0">
-                <span className="max-w-[150px] text-[11px] font-black uppercase tracking-[0.12em] whitespace-nowrap bg-gradient-to-r from-black via-[#780000] to-red-600 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(120,0,0,0.18)] sm:max-w-none sm:text-sm md:text-base lg:text-lg">
+              <div className="flex items-center leading-none">
+                <span className="max-w-[190px] text-[15px] font-black uppercase tracking-[0.12em] whitespace-nowrap bg-gradient-to-r from-black via-[#780000] to-red-600 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(120,0,0,0.18)] sm:max-w-none sm:text-[14px] md:text-[15px] lg:text-xl">
                   True Info Provider
                 </span>
            
@@ -73,7 +73,7 @@ export default function Header() {
               {/* MOBILE MENU */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition"
+                className="md:hidden rounded-lg hover:bg-gray-100 transition"
               >
                 {isMobileMenuOpen ? (
                   <X className="w-6 h-6 text-gray-700" />
@@ -95,8 +95,8 @@ export default function Header() {
           <div className="flex justify-between items-center mb-8">
             <div className="flex items-center gap-3">
               {/* <img src="/logo.png" className="h-8" alt="TrueInfoProvider" /> */}
-              <div className="flex flex-col leading-none gap-0">
-                <span className="max-w-[150px] text-[11px] font-black uppercase tracking-[0.12em] whitespace-nowrap bg-gradient-to-r from-black via-[#780000] to-red-600 bg-clip-text text-transparent sm:max-w-none sm:text-sm md:text-base">
+              <div className="flex items-center leading-none">
+                <span className="max-w-[190px] text-[13px] font-black uppercase tracking-[0.12em] whitespace-nowrap bg-gradient-to-r from-black via-[#780000] to-red-600 bg-clip-text text-transparent sm:max-w-none sm:text-[14px] md:text-[15px] lg:text-xl">
                   True Info Provider
                 </span>
                

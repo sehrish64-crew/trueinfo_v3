@@ -117,7 +117,7 @@ export default function PricingClient() {
         {/* Glow Background */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-red-200/30 blur-3xl rounded-full"></div>
 
-        <div className="relative container mx-auto px-4 py-20">
+        <div className="relative container mx-auto px-4 py-12 md:py-20">
 
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto mb-14">
@@ -126,11 +126,11 @@ export default function PricingClient() {
               <span className="text-sm font-semibold text-gray-700">Simple & Transparent Pricing</span>
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-gray-900">
               Choose Your Plan
             </h1>
 
-            <p className="mt-4 text-gray-600 text-lg">
+            <p className="mt-4 text-gray-600 text-base md:text-lg">
               Get instant vehicle history reports with trusted data sources.
             </p>
           </div>
@@ -160,21 +160,21 @@ export default function PricingClient() {
                     <plan.icon className={`w-7 h-7 ${plan.iconColor}`} />
                   </div>
 
-                  <h3 className="text-2xl font-bold">{plan.name}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold">{plan.name}</h3>
 
                   <div className="mt-4">
-                    <span className="text-xl font-semibold">{plan.currency}</span>
-                    <span className="text-5xl font-bold">{plan.price}</span>
+                    <span className="text-lg md:text-xl font-semibold">{plan.currency}</span>
+                    <span className="text-4xl md:text-5xl font-bold">{plan.price}</span>
                   </div>
 
-                  <p className="text-sm text-gray-500 mt-2">One-time payment</p>
+                  <p className="text-xs md:text-sm text-gray-500 mt-2">One-time payment</p>
 
                   {/* Features */}
                   <div className="mt-6 space-y-2 text-left">
                     {plan.features.map((f, idx) => (
                       <div key={idx} className="flex items-center gap-2">
                         <Check className="w-4 h-4 text-[${PRIMARY}]" />
-                        <span className="text-sm text-gray-700">{f}</span>
+                        <span className="text-xs md:text-sm text-gray-700">{f}</span>
                       </div>
                     ))}
                   </div>
@@ -195,7 +195,7 @@ export default function PricingClient() {
           </div>
 
           {/* Note */}
-          <div className="text-center mt-12 text-gray-600 text-sm space-y-2">
+          <div className="text-center mt-12 text-gray-600 text-xs md:text-sm space-y-2">
             <p>✔ One-time payment only — no subscriptions</p>
             <p>✔ 14-day money-back guarantee</p>
             <p>✔ Instant digital delivery</p>
