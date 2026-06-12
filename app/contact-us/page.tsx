@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import { Suspense } from 'react'
 import ContactUsClient from './contact-us-client'
 
 export const dynamic = 'force-dynamic'
@@ -16,9 +15,5 @@ export const metadata: Metadata = {
 }
 
 export default function ContactUsPage() {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-white flex items-center justify-center">Loading...</div>}>
-      <ContactUsClient />
-    </Suspense>
-  )
+  return <ContactUsClient />
 }

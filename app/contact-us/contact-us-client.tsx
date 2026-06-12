@@ -1,8 +1,7 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { Mail, Phone, MapPin, Send, Car, MessageCircle, Clock } from 'lucide-react'
-import Image from 'next/image'
+import { Send, MessageCircle } from 'lucide-react'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
 import { Button } from '@/components/ui/button'
@@ -34,7 +33,6 @@ export default function ContactUsClient() {
   })
 
   const [isVisible, setIsVisible] = useState(false)
-  const [focusedField, setFocusedField] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
   const [submitError, setSubmitError] = useState('')
