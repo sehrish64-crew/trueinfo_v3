@@ -4,9 +4,6 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { Megaphone, Clock, Mail } from 'lucide-react'
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import SwiperCore from "swiper";
 import { Navigation, Autoplay } from "swiper/modules";
 SwiperCore.use([Navigation, Autoplay]);
@@ -76,19 +73,21 @@ export default function Support() {
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* avatars unchanged */}
-        <div className="flex items-center -space-x-3 justify-center mb-10">
+        {/* responsive avatars */}
+        <div className="flex flex-wrap items-center justify-center gap-2 -space-x-2 sm:-space-x-3 mb-10 px-2">
           {avatarImages.map((image, index) => (
             <img
               key={index}
               src={image}
-              className="w-16 h-16 md:w-20 md:h-20 rounded-full border-4 border-white shadow-lg"
+              alt="Support team member"
+              loading="lazy"
+              className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-full border-4 border-white shadow-lg object-cover flex-shrink-0"
             />
           ))}
         </div>
 
-        {/* heading unchanged */}
-        <h2 className="text-4xl font-bold text-gray-900 text-center">
+        {/* responsive heading */}
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 text-center leading-tight">
           Got questions?
           <br />
           <span className="text-[#780000]">
@@ -97,15 +96,15 @@ export default function Support() {
         </h2>
 
         {/* stats */}
-        <div className="hidden md:grid grid-cols-3 gap-6 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mt-10">
           {supportStats.map((stat, index) => (
-            <div key={index} className="bg-white rounded-2xl p-8 shadow-lg">
+            <div key={index} className="bg-white rounded-2xl p-5 sm:p-6 md:p-8 shadow-lg">
               
-              <div className={`text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+              <div className={`text-3xl sm:text-4xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
                 {stat.value}
               </div>
 
-              <p className="text-gray-600">{stat.label}</p>
+              <p className="text-gray-600 text-sm sm:text-base">{stat.label}</p>
 
               <stat.icon className={`w-8 h-8 mt-4 ${stat.iconColor}`} />
             </div>

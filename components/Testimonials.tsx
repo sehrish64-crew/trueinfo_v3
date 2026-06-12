@@ -86,16 +86,16 @@ export default function Testimonials() {
         {/* HEADER */}
         <div className={`text-center mb-12 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}>
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
             {t('testimonials_title')}
           </h2>
-          <p className="text-gray-700 text-lg mb-6">
+          <p className="text-gray-700 text-sm sm:text-base md:text-lg mb-5 sm:mb-6">
             {t('testimonials_subtitle')}
           </p>
 
           <Button 
             onClick={() => setIsReviewFormOpen(true)}
-            className="bg-[#780000] hover:bg-red-900 text-white px-8 py-6 text-lg"
+            className="bg-[#780000] hover:bg-red-900 text-white px-6 sm:px-8 py-4 sm:py-6 text-sm sm:text-lg"
           >
             {t('testimonials_add_review')}
           </Button>
@@ -116,13 +116,13 @@ export default function Testimonials() {
           {/* LIGHTER GRADIENT (FIXED) */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#780000]/60 via-[#780000]/30 to-transparent flex items-center">
 
-            <div className="max-w-xl px-12">
+            <div className="max-w-xl px-2TrueInfoProvider Vehicle Intelligence">
 
-              <h3 className="text-3xl font-bold text-white mb-4">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3 sm:mb-4">
                 {t('testimonials_trusted_title')}
               </h3>
 
-              <p className="text-white/90 mb-6">
+              <p className="text-white/90 text-sm sm:text-base mb-4 sm:mb-6">
                 {t('testimonials_trusted_subtitle')}
               </p>
 
@@ -137,8 +137,8 @@ export default function Testimonials() {
                 </div>
 
                 <div className="text-white">
-                  <p className="text-2xl font-bold">5M+</p>
-                  <p className="text-sm opacity-80">
+                  <p className="text-xl sm:text-2xl font-bold">5M+</p>
+                  <p className="text-xs sm:text-sm opacity-80">
                     {t('testimonials_reports_generated')}
                   </p>
                 </div>
@@ -160,13 +160,13 @@ export default function Testimonials() {
           <div className="grid md:grid-cols-3 gap-8">
 
             {visibleReviews.map((review) => (
-              <div key={review.id} className="bg-white p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
+              <div key={review.id} className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg hover:-translate-y-2 transition">
 
                 <Quote className="w-10 h-10 text-[#780000]" />
 
                 {renderStars(review.rating)}
 
-                <p className="text-gray-700 mb-6">{review.comment}</p>
+                <p className="text-gray-700 text-sm sm:text-base mb-5 sm:mb-6">{review.comment}</p>
 
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-[#780000] flex items-center justify-center">
@@ -174,8 +174,8 @@ export default function Testimonials() {
                   </div>
 
                   <div>
-                    <p className="font-semibold">{review.name}</p>
-                    <p className="text-green-600 text-sm flex items-center gap-1">
+                    <p className="font-semibold text-sm sm:text-base">{review.name}</p>
+                    <p className="text-green-600 text-xs sm:text-sm flex items-center gap-1">
                       <CheckCircle className="w-4 h-4" />
                       Verified
                     </p>

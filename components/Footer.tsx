@@ -37,7 +37,10 @@ export default function Footer() {
           <p className="text-[11px] sm:text-xs md:text-sm text-white/70 leading-relaxed">
 
             <span className="block mb-2">
-           All Rights Reserved. {new Date().getFullYear()} © TrueInfoProvider. {''}
+              All Rights Reserved. {new Date().getFullYear()} ©
+              <span className="ml-1 inline-block bg-gradient-to-r from-[#ffd7d7] via-[#ff7a7a] to-[#ff7a7a] bg-clip-text text-transparent font-semibold tracking-wide drop-shadow-[0_0_14px_rgba(255,122,122,0.25)]">
+                TrueInfoProvider
+              </span>
             </span>
 
             <Link href="/terms" className="text-[#ccc] hover:text-red-400 transition">
@@ -53,14 +56,16 @@ export default function Footer() {
             </Link>
 
             <span className="block mt-2">
-              An approved NMVTIS data provider.
+              <span className="inline-block bg-gradient-to-r from-[#ffd7d7] via-[#ffb8b8] to-[#ff7a7a] bg-clip-text text-transparent font-medium">
+                An approved NMVTIS data provider.
+              </span>
             </span>
 
             {/* <span className="block mt-2 text-white/90">
               SIU OFFICES, 4-6 GREATOREX STREET, LONDON, UNITED KINGDOM E1 5NF
             </span> */}
             <span className="block mt-1 text-white/90">
-              Phone: <a href="tel:+447555979712" className="text-[#ccc] hover:text-red-400 transition">+44 7828 760930</a>
+              Phone: <a href="tel:+447555979712" className="text-[#ccc] hover:text-red-400 transition">+44 7555 979712</a>
               <span className="mx-2">|</span>
               <a href="https://wa.me/447555979712" target="_blank" rel="noreferrer" className="text-[#ccc] hover:text-green-400 transition">
                 WhatsApp Chat

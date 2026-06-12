@@ -80,20 +80,20 @@ export default function ContactUsClient() {
       <div className="absolute -top-20 left-10 w-96 h-96 bg-[#780000]/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-10 w-96 h-96 bg-red-200/40 rounded-full blur-3xl"></div>
 
-      <div ref={heroRef} className="relative container mx-auto px-4 py-16">
+      <div ref={heroRef} className="relative container mx-auto px-3 py-10 sm:px-4 sm:py-14 md:py-16">
 
         {/* HEADER */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12 md:mb-14">
           <div className="inline-flex items-center gap-2 px-5 py-2 bg-[#780000]/10 border border-[#780000]/20 rounded-full text-[#780000] font-semibold">
             <MessageCircle size={16} />
             Get in Touch
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-extrabold mt-6 text-gray-900">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mt-5 sm:mt-6 text-gray-900 leading-tight">
             Contact <span className="text-[#780000]">TrueInfoProvider</span>
           </h1>
 
-          <p className="text-gray-600 mt-4 text-lg">
+          <p className="text-gray-600 mt-3 sm:mt-4 text-sm sm:text-base md:text-lg">
             We’re here to help you with vehicle history reports & support anytime.
           </p>
         </div>
@@ -121,31 +121,32 @@ export default function ContactUsClient() {
         </div> */}
 
         {/* FORM */}
-        <div className="max-w-4xl mx-auto bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-white rounded-2xl sm:rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
 
-          <div className="bg-gradient-to-r from-[#780000] to-black text-white p-6 md:p-10">
-            <h2 className="text-2xl md:text-3xl font-bold">
+          <div className="bg-gradient-to-r from-[#780000] to-black text-white p-4 sm:p-6 md:p-10">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold">
               Send us a message
             </h2>
-            <p className="text-white/80 mt-2 text-sm">
+            <p className="text-white/80 mt-2 text-xs sm:text-sm">
               We usually respond within 2–4 hours
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="p-6 md:p-10 space-y-5">
+          <form onSubmit={handleSubmit} className="p-4 sm:p-6 md:p-10 space-y-4 sm:space-y-5">
 
-            <div className="grid md:grid-cols-2 gap-5">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-5">
               <Input
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="focus:ring-[#780000]"
+                className="focus:ring-[#780000] text-sm sm:text-base"
               />
 
               <Input
                 placeholder="Your Email"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                className="text-sm sm:text-base"
               />
             </div>
 
@@ -153,13 +154,14 @@ export default function ContactUsClient() {
               placeholder="Subject"
               value={formData.subject}
               onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+              className="text-sm sm:text-base"
             />
 
             <Textarea
               placeholder="Your Message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              className="min-h-[140px]"
+              className="min-h-[120px] sm:min-h-[140px] text-sm sm:text-base"
             />
 
             {submitSuccess && (
@@ -173,7 +175,7 @@ export default function ContactUsClient() {
             <Button
               type="submit"
               disabled={isSubmitting}
-              className="w-full bg-[#780000] hover:bg-black text-white py-3 rounded-xl text-lg font-semibold transition-all"
+              className="w-full bg-[#780000] hover:bg-black text-white py-2.5 sm:py-3 rounded-xl text-base sm:text-lg font-semibold transition-all"
             >
               <Send className="mr-2" size={18} />
               {isSubmitting ? 'Sending...' : 'Send Message'}

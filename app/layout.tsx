@@ -66,7 +66,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     openGraph: {
       type: 'website',
-      url: 'https://autofactscheck.com',
+      url: 'https://trueinfoprovider.com',
       title: `TrueInfoProvider- ${tmap['banner_title'] || "Check any car's history"}`,
       siteName: 'AutoFactsCheck',
       images: [
@@ -99,7 +99,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
         />
-        <link rel="canonical" href="https://autofactscheck.com" />
+        <link rel="canonical" href="https://trueinfoprovider.com" />
         <link rel="icon" href="/favicon.ico" sizes="32x32" type="image/x-icon" />
         <link rel="icon" href="/favicon-192.png" sizes="192x192" type="image/png" />
         <link rel="apple-touch-icon" href="/favicon-192.png" />

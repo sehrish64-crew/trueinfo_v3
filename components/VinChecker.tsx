@@ -65,17 +65,17 @@ export default function VinChecker() {
             {/* LEFT SIDE */}
             <div className="space-y-6 text-white">
 
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
                 TrueInfoProvider Vehicle Intelligence
               </h2>
 
-              <p className="text-sm sm:text-base md:text-lg text-white/90">
+              <p className="text-xs sm:text-sm md:text-base text-white/90">
                 Instantly uncover accident history, mileage records, ownership changes, and hidden issues before buying any car.
               </p>
 
               <div className="flex items-center space-x-2 text-white/90">
                 <CheckCircle className="w-5 h-5" />
-                <span className="text-sm md:text-base">
+                <span className="text-xs sm:text-sm md:text-base">
                   Trusted by 4.5M+ users across 35+ countries
                 </span>
               </div>
@@ -86,7 +86,7 @@ export default function VinChecker() {
                     key={index}
                     className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/20"
                   >
-                    <span className="text-white text-xs md:text-sm font-semibold">
+                    <span className="text-white text-[10px] sm:text-xs md:text-sm font-semibold">
                       {logo.name}
                     </span>
                   </div>
@@ -133,26 +133,26 @@ export default function VinChecker() {
                   placeholder="Enter VIN Number"
                   value={vin}
                   onChange={(e) => setVin(e.target.value.toUpperCase())}
-                  className="text-lg py-6"
+                  className="text-sm md:text-base py-4 placeholder:text-xs md:placeholder:text-sm"
                 />
               ) : (
                 <Input
                   placeholder="Enter Plate Number"
                   value={plate}
                   onChange={(e) => setPlate(e.target.value.toUpperCase())}
-                  className="text-lg py-6"
+                  className="text-sm md:text-base py-4 placeholder:text-xs md:placeholder:text-sm"
                 />
               )}
 
               {/* BUTTON */}
               <Button
                 onClick={() => setIsFormOpen(true)}
-                className="w-full mt-4 bg-[#780000] hover:bg-[#5a0000] text-white font-bold py-3"
+                className="w-full mt-4 bg-[#780000] hover:bg-[#5a0000] text-white font-bold py-2.5 text-sm md:text-base"
               >
-                Get Free Report
+                Get Report
               </Button>
 
-              <p className="text-xs text-gray-500 mt-3 text-center">
+              <p className="text-[11px] sm:text-xs text-gray-500 mt-3 text-center">
                 Powered by TrueInfoProvider Data Engine
               </p>
 

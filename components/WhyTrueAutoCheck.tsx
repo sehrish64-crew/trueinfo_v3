@@ -63,9 +63,9 @@ export default function WhyAutoFactsCheck() {
                   Starting from
                 </div>
                 <div className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 animate-pulse">
-                  $40
+                  £30
                 </div>
-              </div>
+              </div>1,000,000+
 
               <div
                 className={`transform transition-all duration-1000 delay-400 ${isVisible ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'

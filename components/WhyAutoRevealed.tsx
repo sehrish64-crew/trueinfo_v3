@@ -60,7 +60,7 @@ export default function WhyTrueInfoProvider() {
                   Starting from
                 </div>
                 <div className="text-4xl md:text-6xl font-bold text-[#780000] drop-shadow-lg">
-                  $40
+                  £30
                 </div>
               </div>
 
@@ -134,25 +134,25 @@ export default function WhyTrueInfoProvider() {
 
           <div className="absolute inset-0 bg-gradient-to-r from-[#780000] via-red-800 to-black"></div>
 
-          <div className="relative p-10 md:p-16 text-white grid md:grid-cols-2 gap-10">
+          <div className="relative p-6 sm:p-10 md:p-16 text-white grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 md:gap-10">
 
-            <div>
-              <h3 className="text-3xl font-bold mb-4">
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 leading-tight">
                 1,000,000+ Trusted Users
               </h3>
-              <p className="text-white/80">
+              <p className="text-sm sm:text-base text-white/80 leading-relaxed">
                 Across 150+ countries using secure VIN reports.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/10 p-4 rounded-xl">
-                <p className="text-2xl font-bold">4.8★</p>
-                <p className="text-xs text-white/70">Rating</p>
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
+              <div className="bg-white/10 p-3 sm:p-4 rounded-xl">
+                <p className="text-xl sm:text-2xl font-bold">4.8★</p>
+                <p className="text-[10px] sm:text-xs text-white/70">Rating</p>
               </div>
-              <div className="bg-white/10 p-4 rounded-xl">
-                <p className="text-2xl font-bold">99.9%</p>
-                <p className="text-xs text-white/70">Uptime</p>
+              <div className="bg-white/10 p-3 sm:p-4 rounded-xl">
+                <p className="text-xl sm:text-2xl font-bold">99.9%</p>
+                <p className="text-[10px] sm:text-xs text-white/70">Uptime</p>
               </div>
             </div>
 

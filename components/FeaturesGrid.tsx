@@ -51,12 +51,12 @@ export default function FeaturesGrid() {
         </div>
 
         {/* Tabs */}
-        <div className="flex overflow-x-auto gap-2 sm:gap-4 md:gap-8 border-b border-border animate-fade-in-up">
+        <div className="flex overflow-x-auto gap-1 sm:gap-2 md:gap-4 border-b border-border pb-1 sm:pb-0 animate-fade-in-up">
           {tabs.map((tab) => (
             <div key={tab.id} className="relative min-w-max">
               <button
                 onClick={() => setActiveTab(tab.id)}
-                className={`text-xs sm:text-sm md:text-base font-semibold pb-3 px-3 transition ${activeTab === tab.id
+                className={`text-xs sm:text-sm md:text-base font-semibold pb-2 sm:pb-3 px-2 sm:px-3 transition ${activeTab === tab.id
                   ? 'text-[#780000]'
                   : 'text-muted-foreground hover:text-[#780000]'
                   }`}
@@ -74,13 +74,13 @@ export default function FeaturesGrid() {
         </div>
 
         {/* Content */}
-        <div className="mt-10">
+        <div className="mt-6 sm:mt-10">
 
           {/* ODOMETER */}
           {activeTab === 'odometer' && (
-            <div className="grid md:grid-cols-2 gap-10 items-start">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start">
 
-              <div className="relative w-full h-80">
+              <div className="relative w-full h-52 sm:h-64 md:h-80">
                 <Image src="/odometer-check-en@1x.webp" alt="" fill className="object-contain" />
               </div>
 
@@ -103,9 +103,9 @@ export default function FeaturesGrid() {
 
           {/* OWNERSHIP */}
           {activeTab === 'ownership' && (
-            <div className="grid md:grid-cols-2 gap-10 items-start">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start">
 
-              <div className="relative w-full h-80">
+              <div className="relative w-full h-52 sm:h-64 md:h-80">
                 <Image src="/ownership.webp" alt="" fill className="object-contain" />
               </div>
 
@@ -128,9 +128,9 @@ export default function FeaturesGrid() {
 
           {/* PHOTOS */}
           {activeTab === 'photos' && (
-            <div className="grid md:grid-cols-2 gap-10 items-start">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start">
 
-              <div className="relative w-full h-80">
+              <div className="relative w-full h-52 sm:h-64 md:h-80">
                 <Image src="/photos-sale.webp" alt="" fill className="object-contain" />
               </div>
 
@@ -153,9 +153,9 @@ export default function FeaturesGrid() {
 
           {/* DAMAGE */}
           {activeTab === 'damage' && (
-            <div className="grid md:grid-cols-2 gap-10 items-start">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start">
 
-              <div className="relative w-full h-80">
+              <div className="relative w-full h-52 sm:h-64 md:h-80">
                 <Image src="/damage.webp" alt="" fill className="object-contain" />
               </div>
 
@@ -178,9 +178,9 @@ export default function FeaturesGrid() {
 
           {/* TECHNICAL */}
           {activeTab === 'technical' && (
-            <div className="grid md:grid-cols-2 gap-10 items-start">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start">
 
-              <div className="relative w-full h-80">
+              <div className="relative w-full h-52 sm:h-64 md:h-80">
                 <Image src="/specification.webp" alt="" fill className="object-contain" />
               </div>
 
@@ -203,9 +203,9 @@ export default function FeaturesGrid() {
 
           {/* STOLEN */}
           {activeTab === 'stolen' && (
-            <div className="grid md:grid-cols-2 gap-10 items-start">
+            <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-10 items-start">
 
-              <div className="relative w-full h-80">
+              <div className="relative w-full h-52 sm:h-64 md:h-80">
                 <Image src="/stolen.webp" alt="" fill className="object-contain" />
               </div>
 
@@ -229,14 +229,14 @@ export default function FeaturesGrid() {
         </div>
 
         {/* Bottom Badge */}
-        <div className="mt-16 p-6 bg-[#780000]/10 border border-[#780000]/20 rounded-xl flex gap-4">
-          <div className="w-12 h-12 bg-[#780000]/20 rounded-full flex items-center justify-center">
+        <div className="mt-10 sm:mt-16 p-2.5 sm:p-6 bg-[#780000]/10 border border-[#780000]/20 rounded-xl flex flex-col gap-2.5 sm:flex-row sm:gap-4">
+          <div className="w-9 h-9 sm:w-12 sm:h-12 bg-[#780000]/20 rounded-full flex items-center justify-center shrink-0 text-xs sm:text-base">
             ✓
           </div>
-          <div>
-            <h4 className="font-bold">Official NMVTIS Source</h4>
-            <p className="text-gray-600 text-sm">
-              TrueInfoProvideris an approved NMVTIS provider helping prevent fraud and unsafe vehicle purchases.
+          <div className="min-w-0">
+            <h4 className="text-xs sm:text-base font-bold">Official NMVTIS Source</h4>
+            <p className="text-[11px] sm:text-sm text-gray-600 leading-relaxed">
+              TrueInfoProvider is an approved NMVTIS provider helping prevent fraud and unsafe vehicle purchases.
             </p>
           </div>
         </div>
